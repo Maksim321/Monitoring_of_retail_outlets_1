@@ -1,0 +1,10 @@
+C:\Users\Максим\Documents\Visual Studio 2013\Projects\Monitoring_of_retail_outlets\Monitoring_of_retail_outlets\bin\Debug\Monitoring_of_retail_outlets.exe.config
+C:\Users\Максим\Documents\Visual Studio 2013\Projects\Monitoring_of_retail_outlets\Monitoring_of_retail_outlets\bin\Debug\Monitoring_of_retail_outlets.exe
+C:\Users\Максим\Documents\Visual Studio 2013\Projects\Monitoring_of_retail_outlets\Monitoring_of_retail_outlets\bin\Debug\Monitoring_of_retail_outlets.pdb
+C:\Users\Максим\Documents\Visual Studio 2013\Projects\Monitoring_of_retail_outlets\Monitoring_of_retail_outlets\obj\Debug\Monitoring_of_retail_outlets.csprojResolveAssemblyReference.cache
+C:\Users\Максим\Documents\Visual Studio 2013\Projects\Monitoring_of_retail_outlets\Monitoring_of_retail_outlets\obj\Debug\Monitoring_of_retail_outlets.Add_Outlets_Form.resources
+C:\Users\Максим\Documents\Visual Studio 2013\Projects\Monitoring_of_retail_outlets\Monitoring_of_retail_outlets\obj\Debug\Monitoring_of_retail_outlets.Form1.resources
+C:\Users\Максим\Documents\Visual Studio 2013\Projects\Monitoring_of_retail_outlets\Monitoring_of_retail_outlets\obj\Debug\Monitoring_of_retail_outlets.Properties.Resources.resources
+C:\Users\Максим\Documents\Visual Studio 2013\Projects\Monitoring_of_retail_outlets\Monitoring_of_retail_outlets\obj\Debug\Monitoring_of_retail_outlets.csproj.GenerateResource.Cache
+C:\Users\Максим\Documents\Visual Studio 2013\Projects\Monitoring_of_retail_outlets\Monitoring_of_retail_outlets\obj\Debug\Monitoring_of_retail_outlets.exe
+C:\Users\Максим\Documents\Visual Studio 2013\Projects\Monitoring_of_retail_outlets\Monitoring_of_retail_outlets\obj\Debug\Monitoring_of_retail_outlets.pdb
