@@ -9,15 +9,19 @@ namespace Monitoring_of_retail_outlets
     class COutlets
     {
         public string s_nameOutlets;
+        public string s_nameManager;
+        public string s_adress;
         public List<СProduct> products;
 
         public COutlets()
         {
             products = new List<СProduct>();
         }
-        public COutlets(string name)
+        public COutlets(string name, string manager, string adress)
         {
             s_nameOutlets = name;
+            s_nameManager = manager;
+            s_adress = adress;
             products = new List<СProduct>();
         }
 
@@ -38,6 +42,16 @@ namespace Monitoring_of_retail_outlets
         public void Del_product(СProduct del_product)
         {
             products.Remove(del_product);
+        }
+        public void Del_product(int del_product)
+        {
+            products.RemoveAt(del_product);
+            reindex_product(del_product);
+        }
+        private void reindex_product(int index)
+        {
+            for(int i=index;i<products.Count;i++)
+                products[i].index = products[i].index - 1;
         }
         public СProduct Return_Product(int index)
         {

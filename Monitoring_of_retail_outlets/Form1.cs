@@ -19,11 +19,6 @@ namespace Monitoring_of_retail_outlets
 
         private void Add_Outlets_Button_Click(object sender, EventArgs e)
         {
-            getOutletsInfo.List_Outlets.Add(new COutlets(Outlets_Name_TB.Text));
-            List_Of_Outlets_LB.Items.Add(Outlets_Name_TB.Text);
-        }
-        private void Config_Outlets_Button_Click(object sender, EventArgs e)
-        {
             Add_Outlets_Form a = new Add_Outlets_Form();
             a.Owner = this;
             a.Show();
@@ -32,11 +27,38 @@ namespace Monitoring_of_retail_outlets
 
         private void Add_Product_Button_Click(object sender, EventArgs e)
         {
-            getOutletsInfo.List_Outlets[List_Of_Outlets_LB.SelectedIndex].addProduct(Product_Name_TB.Text, Convert.ToDouble(Product_Price_TB.Text),
-                Convert.ToInt32(Product_Count_TB.Text), List_Of_Outlets_LB.Items.Count-1);
+            double price;
+            int count;
+            try
+            {
+                price = Convert.ToDouble(Product_Price_TB.Text);
+            }
+            catch (FormatException exception)
+            {
+                MessageBox.Show("Цена введена некоректно!");
+                return;
+            }
+            try
+            {
+                count = Convert.ToInt32(Product_Count_TB.Text);
+            }
+            catch (FormatException exception)
+            {
+                MessageBox.Show("Количество введено некоректно!");
+                return;
+            }
+            getOutletsInfo.List_Outlets[List_Of_Outlets_LB.SelectedIndex].addProduct(Product_Name_TB.Text, price,
+                count, Information_Outlets_DGV.RowCount - 1);
+            Update_Information_DGV();
         }
-
         private void List_Of_Outlets_LB_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Update_Information_DGV();
+            Name_Label.Text = getOutletsInfo.List_Outlets[List_Of_Outlets_LB.SelectedIndex].s_nameOutlets;
+            Manager_Label.Text = "Управляющий: " + getOutletsInfo.List_Outlets[List_Of_Outlets_LB.SelectedIndex].s_nameManager;
+            Adress_Label.Text = "Адрес: " + getOutletsInfo.List_Outlets[List_Of_Outlets_LB.SelectedIndex].s_adress;
+        }
+        private void Update_Information_DGV()
         {
             Information_Outlets_DGV.Rows.Clear();
             for (int i = 0; i < getOutletsInfo.List_Outlets[List_Of_Outlets_LB.SelectedIndex].products.Count; i++)
@@ -46,6 +68,12 @@ namespace Monitoring_of_retail_outlets
                 Information_Outlets_DGV.Rows[i].Cells[1].Value = getOutletsInfo.List_Outlets[List_Of_Outlets_LB.SelectedIndex].Return_Product(i).Price;
                 Information_Outlets_DGV.Rows[i].Cells[2].Value = getOutletsInfo.List_Outlets[List_Of_Outlets_LB.SelectedIndex].Return_Product(i).Number;
             }
+        }
+
+        private void Delete_Outlets_Button_Click(object sender, EventArgs e)
+        {
+            getOutletsInfo.List_Outlets[List_Of_Outlets_LB.SelectedIndex].Del_product(Information_Outlets_DGV.CurrentRow.Index);
+            Information_Outlets_DGV.Rows.RemoveAt(Information_Outlets_DGV.CurrentRow.Index);
         }
     }
 }
