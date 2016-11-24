@@ -24,7 +24,6 @@ namespace Monitoring_of_retail_outlets
             s_adress = adress;
             products = new List<СProduct>();
         }
-
         public void addProduct(string s_nameProd, double d_priceProd, int i_numberProd, int i_indexProd)
         {
            products.Add(new СProduct(s_nameProd, d_priceProd, i_numberProd, i_indexProd));

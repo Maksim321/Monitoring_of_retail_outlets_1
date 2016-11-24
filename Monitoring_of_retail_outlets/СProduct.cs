@@ -21,7 +21,6 @@ namespace Monitoring_of_retail_outlets
             index = 0;
         }
 
-
         public СProduct(string new_product_name, double new_price, int new_number, int new_index)
         {
             product_name = new_product_name;
