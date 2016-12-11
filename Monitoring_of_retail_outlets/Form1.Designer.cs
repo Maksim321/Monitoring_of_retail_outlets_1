@@ -48,6 +48,7 @@
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.Load_Outlets_BT = new System.Windows.Forms.Button();
             this.Save_Outlets_BT = new System.Windows.Forms.Button();
+            this.Search_Button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Information_Outlets_DGV)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,15 +57,15 @@
             this.List_Of_Outlets_LB.FormattingEnabled = true;
             this.List_Of_Outlets_LB.Location = new System.Drawing.Point(13, 13);
             this.List_Of_Outlets_LB.Name = "List_Of_Outlets_LB";
-            this.List_Of_Outlets_LB.Size = new System.Drawing.Size(137, 290);
+            this.List_Of_Outlets_LB.Size = new System.Drawing.Size(137, 264);
             this.List_Of_Outlets_LB.TabIndex = 0;
             this.List_Of_Outlets_LB.SelectedIndexChanged += new System.EventHandler(this.List_Of_Outlets_LB_SelectedIndexChanged);
             // 
             // Delete_Outlets_Button
             // 
-            this.Delete_Outlets_Button.Location = new System.Drawing.Point(465, 339);
+            this.Delete_Outlets_Button.Location = new System.Drawing.Point(606, 334);
             this.Delete_Outlets_Button.Name = "Delete_Outlets_Button";
-            this.Delete_Outlets_Button.Size = new System.Drawing.Size(94, 23);
+            this.Delete_Outlets_Button.Size = new System.Drawing.Size(120, 23);
             this.Delete_Outlets_Button.TabIndex = 1;
             this.Delete_Outlets_Button.Text = "Удалить";
             this.Delete_Outlets_Button.UseVisualStyleBackColor = true;
@@ -79,7 +80,7 @@
             this.Number_Product});
             this.Information_Outlets_DGV.Location = new System.Drawing.Point(161, 45);
             this.Information_Outlets_DGV.Name = "Information_Outlets_DGV";
-            this.Information_Outlets_DGV.Size = new System.Drawing.Size(435, 258);
+            this.Information_Outlets_DGV.Size = new System.Drawing.Size(435, 312);
             this.Information_Outlets_DGV.TabIndex = 2;
             // 
             // Product_Name
@@ -105,9 +106,9 @@
             // 
             // Add_Outlets_Button
             // 
-            this.Add_Outlets_Button.Location = new System.Drawing.Point(12, 310);
+            this.Add_Outlets_Button.Location = new System.Drawing.Point(12, 283);
             this.Add_Outlets_Button.Name = "Add_Outlets_Button";
-            this.Add_Outlets_Button.Size = new System.Drawing.Size(143, 23);
+            this.Add_Outlets_Button.Size = new System.Drawing.Size(138, 23);
             this.Add_Outlets_Button.TabIndex = 4;
             this.Add_Outlets_Button.Text = "Добавить магазин";
             this.Add_Outlets_Button.UseVisualStyleBackColor = true;
@@ -202,7 +203,7 @@
             // 
             // Load_Outlets_BT
             // 
-            this.Load_Outlets_BT.Location = new System.Drawing.Point(12, 339);
+            this.Load_Outlets_BT.Location = new System.Drawing.Point(12, 312);
             this.Load_Outlets_BT.Name = "Load_Outlets_BT";
             this.Load_Outlets_BT.Size = new System.Drawing.Size(69, 23);
             this.Load_Outlets_BT.TabIndex = 15;
@@ -212,7 +213,7 @@
             // 
             // Save_Outlets_BT
             // 
-            this.Save_Outlets_BT.Location = new System.Drawing.Point(87, 339);
+            this.Save_Outlets_BT.Location = new System.Drawing.Point(82, 312);
             this.Save_Outlets_BT.Name = "Save_Outlets_BT";
             this.Save_Outlets_BT.Size = new System.Drawing.Size(68, 23);
             this.Save_Outlets_BT.TabIndex = 16;
@@ -220,11 +221,22 @@
             this.Save_Outlets_BT.UseVisualStyleBackColor = true;
             this.Save_Outlets_BT.Click += new System.EventHandler(this.Save_Outlets_BT_Click);
             // 
+            // Search_Button
+            // 
+            this.Search_Button.Location = new System.Drawing.Point(13, 339);
+            this.Search_Button.Name = "Search_Button";
+            this.Search_Button.Size = new System.Drawing.Size(137, 23);
+            this.Search_Button.TabIndex = 17;
+            this.Search_Button.Text = "Поиск";
+            this.Search_Button.UseVisualStyleBackColor = true;
+            this.Search_Button.Click += new System.EventHandler(this.Search_Button_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(868, 374);
+            this.ClientSize = new System.Drawing.Size(868, 369);
+            this.Controls.Add(this.Search_Button);
             this.Controls.Add(this.Save_Outlets_BT);
             this.Controls.Add(this.Load_Outlets_BT);
             this.Controls.Add(this.Manager_Label);
@@ -271,6 +283,7 @@
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         private System.Windows.Forms.Button Load_Outlets_BT;
         private System.Windows.Forms.Button Save_Outlets_BT;
+        private System.Windows.Forms.Button Search_Button;
     }
 }
 

@@ -71,12 +71,8 @@ namespace Monitoring_of_retail_outlets
         }
         private void Delete_Outlets_Button_Click(object sender, EventArgs e)
         {
-            //getOutletsInfo.List_Outlets[List_Of_Outlets_LB.SelectedIndex].Del_product(Information_Outlets_DGV.CurrentRow.Index);
-            //Information_Outlets_DGV.Rows.RemoveAt(Information_Outlets_DGV.CurrentRow.Index);
-            Search_Product_Form a = new Search_Product_Form();
-            a.Owner = this;
-            a.Show();
-            a.Select();
+            getOutletsInfo.List_Outlets[List_Of_Outlets_LB.SelectedIndex].Del_product(Information_Outlets_DGV.CurrentRow.Index);
+            Information_Outlets_DGV.Rows.RemoveAt(Information_Outlets_DGV.CurrentRow.Index);
         }
         private void ReadFile(string path)
         {
@@ -86,7 +82,7 @@ namespace Monitoring_of_retail_outlets
             string s_nameOutlets, s_nameManager, s_adress;
             foreach (var item in dir.GetFiles())
             {
-                streamReader = new StreamReader(path + "\\" + item.Name);
+                streamReader = new StreamReader(path + "\\" + item.Name, enc);
                 s_nameOutlets = streamReader.ReadLine();
                 s_nameManager = streamReader.ReadLine();
                 s_adress = streamReader.ReadLine();
@@ -137,6 +133,14 @@ namespace Monitoring_of_retail_outlets
             folderBrowserDialog1.ShowDialog();
             string path = folderBrowserDialog1.SelectedPath;
             saveResult(path);
-        }  
+        }
+
+        private void Search_Button_Click(object sender, EventArgs e)
+        {
+            Search_Product_Form a = new Search_Product_Form();
+            a.Owner = this;
+            a.Show();
+            a.Select();
+        }
     }
 }
